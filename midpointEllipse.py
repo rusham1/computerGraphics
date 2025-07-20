@@ -35,12 +35,12 @@ def midpointEllipse(rx, ry, xc, yc):
     while dx < dy:
         plot_Ellipse_points(xc, yc, x, y)
         x += 1
-        dx = dx + 2 * ry**2
+        dx +=  2 * ry**2
         if p1 < 0:
             p1 += dx + ry**2
         else:
             y -= 1
-            dy = dy - 2 * rx**2
+            dy += - 2 * rx**2
             p1 += dx - dy + ry**2
 
     p2 = (ry**2) * ((x + 0.5)**2) + (rx**2) * ((y - 1)**2) - (rx**2 * ry**2)
@@ -48,12 +48,12 @@ def midpointEllipse(rx, ry, xc, yc):
     while y >= 0:
         plot_Ellipse_points(xc, yc, x, y)
         y -= 1
-        dy = dy - 2 * rx**2
+        dy += - 2 * rx**2
         if p2 > 0:
             p2 += rx**2 - dy
         else:
             x += 1
-            dx = dx + 2 * ry**2
+            dx +=2 * ry**2
             p2 += dx - dy + rx**2
 
 def main():
